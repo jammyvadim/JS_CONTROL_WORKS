@@ -60,4 +60,3 @@ function pairs_list_update() {
 
     }
 }
-
