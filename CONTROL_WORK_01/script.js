@@ -100,7 +100,7 @@ button_sort_by_value.onclick = function (){
 }
 
 button_delete.onclick=function () {
-    arr = arr.filter(item => item.is_pair_selected !== true)
+    arr = arr.filter(item => item.is_pair_selected === false)
     localStorage.setItem('js_control_work_01_arr', arr)
     pairs_list_update()
 }
