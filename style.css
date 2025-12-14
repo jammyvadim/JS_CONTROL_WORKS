@@ -1,0 +1,34 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+h3, p, a{
+    margin: 0;
+    padding: 0;
+}
+a{
+    /*background: yellow;*/
+    font-weight: bold;
+    color: blue;
+    font-size: 18px;
+}
+.div_grid{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+}
+.div_rows{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    /*background: yellow;*/
+}
+object, iframe, embed{
+    width: 100%;
+    height: 100%;
+
+    /*height: ;*/
+}
