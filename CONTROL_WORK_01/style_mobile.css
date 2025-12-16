@@ -6,8 +6,12 @@
     }
 
     header {
+        display:flex;
+        flex-direction: row;
+        justify-content: space-around;
         padding: 0;
         align-items: center;
+        gap: 5px;
     }
 
     .div_main {
@@ -47,4 +51,8 @@
         width: 100%;
     }
 
+    br{
+        /*opacity: 0;*/
+        display: none;
+    };
 }
