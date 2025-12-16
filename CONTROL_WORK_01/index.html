@@ -2,34 +2,56 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+<!--    для адаптивної розмітки. Початок. -->
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <!--    для адаптивної розмітки. Кінець -->
     <title>JS. Control work 1</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style_mobile.css">
 </head>
 <body>
 
-    <a href="../index.html">Home</a>
+    <header>
+        <a href="../index.html">Home</a>
+        <h3>Control Work 01.</h3>
+    </header>
 
-    <h3>Control Work 01.</h3>
+    <div class="div_main">
 
-    <!--    <form name="form_test" id="form_test_id" title="Test">-->
-        <h3 id="form_h3">Test</h3>
+        <h3>Test</h3>
 
-        <label for="id_input_new_pair">Name/Value Pair</label>
-        <input type="text" id="id_input_new_pair" name="input_new_pair" placeholder="Name=Value" spellcheck="true" lang="en">
+        <div class="div_main_grid">
 
-        <button id="id_button_add_new">Add</button>
-        <button id="id_button_sort_by_name">Sort by name</button>
-        <button id="id_button_sort_by_value">Sort by value</button>
-        <button id="id_button_delete">Delete selected</button>
+            <div class="div_main_grid_cell">
+                <label for="id_input_new_pair">Name/Value Pair</label>
+                <input type="text" id="id_input_new_pair" name="input_new_pair" placeholder="Name=Value" spellcheck="true" lang="en">
+                <p id="id_input_new_err"></p>
+            </div>
 
-        <p id="id_input_new_err"></p>
+            <div class="div_main_grid_cell">
+                <br> <!--- пустий рядок, щоб вирівняти кнопку по вистрої з інпутом -->
+                <button id="id_button_add_new">Add</button>
+            </div>
 
-        <div id="id_div_pairs_list">
+            <div class="div_main_grid_cell">
+                <p>Name/Value Pair List</p>
+                <div id="id_div_pairs_list"></div> <!--цей дів для скрипта-->
+            </div>
 
+            <div class="div_main_grid_cell">
+                <br> <!--- пустий рядок, щоб вирівняти верхню кнопку по висоті з рамкою списку -->
+                <button id="id_button_sort_by_name">Sort by name</button>
+                <br> <!--- замість gap між кнопками -->
+                <button id="id_button_sort_by_value">Sort by value</button>
+                <br> <!--- замість gap між кнопками -->
+                <br> <!--- замість gap між кнопками -->
+                <button id="id_button_delete">Delete selected</button>
+            </div>
 
         </div>
+    </div>
 
-<!--    </form>-->
     <script src="script.js"></script>
 </body>
 </html>

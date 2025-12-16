@@ -1,0 +1,50 @@
+@media screen and (min-width: 0) and (max-width: 720px){
+
+    body{
+        margin: 0;
+        padding: 0;
+    }
+
+    header {
+        padding: 0;
+        align-items: center;
+    }
+
+    .div_main {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .div_main h3{
+        padding:0;
+    }
+
+    .div_main_grid {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        /*grid-template-rows: 100px fit-content(0px);*/
+    }
+
+    .div_main_grid_cell{
+        padding: 0;
+    }
+    #id_input_new_err {
+        margin: 0;
+    }
+
+    #id_div_pairs_list {
+        /*height: fit-content;*/;
+        /*overflow: auto;*/
+        border-style: solid;
+        border-color: lightgray;
+    }
+
+    .div_main_grid_cell label, p, br{
+        width: 100%;
+    }
+
+}

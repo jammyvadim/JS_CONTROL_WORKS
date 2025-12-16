@@ -1,11 +1,80 @@
 body{
     padding: 0;
+    margin: 0 50px 0 50px;
+    background: steelblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-left: 10px;
+    justify-content: flex-start;
+}
+
+.div_main{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    margin: 10px;
+    background: white;
+}
+
+.div_main h3{
+    padding-left: 10px;
+}
+
+.div_main_grid{
+    display: grid;
+    grid-template-columns: 500px 150px;
+    grid-template-rows: 100px 300px;
+    /*grid-template-rows: 100px fit-content(0px);*/
+}
+
+.div_main_grid_cell{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.div_main_grid_cell label, p, br{
+    font-size: 14px;
+    color: gray;
+    padding: 0;
     margin: 0;
+}
+/*  fonts for input, list of pairs, buttons and error message */
+#id_input_new_pair, .p_pair, .p_pair_selected, #id_input_new_err{
+    font-size: 16px;
+    font-weight: bold;
+}
+
+button{
+    font-weight: bold;
+}
+
+
+#id_input_new_pair{
+    border-style: solid;
+    border-color: lightgray;
+}
+
+#id_input_new_err{
+    margin-top: 10px;
+    color: red;
 }
 
 #id_div_pairs_list{
     display: flex;
     flex-direction: column;
+    /*height: fit-content;*/
+    height: 300px;
+    overflow: auto;
     border-style: solid;
     border-color: lightgray;
 }
