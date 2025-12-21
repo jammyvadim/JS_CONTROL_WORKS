@@ -1,0 +1,39 @@
+header{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-left: 10px;
+    justify-content: flex-start;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+}
+
+.div_users{
+    /*display: flex;*/
+    /*flex-direction: column;*/
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto;
+}
+
+.div_user{
+    display: flex;
+    flex-direction: column;
+    background: lightblue;
+    margin: 5px;
+    padding: 5px;
+    justify-content: center;
+}
+
+.div_user p, a{
+    margin: 1px;
+    padding: 1px;
+}
+
+.div_user p{
+    font-size: 18px;
+    font-weight: bold;
+}
