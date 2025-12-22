@@ -11,6 +11,16 @@ main{
     flex-direction: column;
 }
 
+.h3_users_list_title{
+    background: lightblue;
+    padding: 5px;
+    margin: 5px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+    font-style: italic;
+}
+
 .div_users{
     /*display: flex;*/
     /*flex-direction: column;*/

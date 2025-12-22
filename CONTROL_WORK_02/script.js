@@ -1,11 +1,12 @@
-const database_link = 'https://jsonplaceholder.typicode.com/users'
+const database_link = 'https://jsonplaceholder.typicode.com'
+const users_db_link= database_link + '/users'
 const div_users = document.getElementById('div_users')
 
 let selected_user_id = 0
 let loc_st_obj = {database_link: database_link, selected_user_id: selected_user_id}
 let loc_st_str = JSON.stringify(loc_st_obj)
 
-fetch(database_link)
+fetch(users_db_link)
     .then(response=> response.json())
     .then(json=> {
         const users = json
