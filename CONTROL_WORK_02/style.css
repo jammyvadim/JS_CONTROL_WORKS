@@ -47,3 +47,11 @@ main{
     font-size: 18px;
     font-weight: bold;
 }
+
+.b_user_details{
+    background: none;
+    border-style: none;
+    color: blue;
+    width: auto;
+    align-self: flex-end;
+}

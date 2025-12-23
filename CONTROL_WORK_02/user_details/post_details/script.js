@@ -72,7 +72,8 @@ fetch(selected_post_db_link)
 
                     const a_comment_author = document.createElement('a')
                     a_comment_author.classList.add('a_comment_author')
-                    a_comment_author.innerHTML = comment.email
+                    a_comment_author.innerHTML = 'author: ' + comment.email
+                    a_comment_author.href = 'mailto:' + comment.email
                     div_comment_block.appendChild(a_comment_author)
 
                 }

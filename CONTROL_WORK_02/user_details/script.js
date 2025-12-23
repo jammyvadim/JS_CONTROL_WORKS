@@ -46,17 +46,21 @@ fetch(selected_user_db_link)
 const button_user_posts = document.getElementById('button_user_posts')
 let is_posts_showed = false
 
+button_user_posts.innerText = 'post of current user'
+
 button_user_posts.onclick = function () {
 
     const div_posts = document.getElementById('div_posts')
     div_posts.innerHTML=''
 
+    const h3_footer = document.getElementById('h3_footer')
+
     if (is_posts_showed === true){
         is_posts_showed = false
-        button_user_posts.innerText = 'show posts of current user'
+        button_user_posts.innerText = 'post of current user'
     }else{
         is_posts_showed = true
-        button_user_posts.innerText = 'hide posts'
+        button_user_posts.innerText = 'hide post'
 
         const selected_user_db_posts_link = selected_user_db_link  + '/posts'
 
@@ -76,19 +80,24 @@ button_user_posts.onclick = function () {
                     p_post_main_info.classList.add('p_post_main_info')
                     p_post_main_info.innerText = post.id + '. ' + post.title + '... '
 
-                    const a_post_details = document.createElement('a')
-                    a_post_details.classList.add('a_post_details')
-                    a_post_details.innerText = 'show full post ' + post.id
-                    a_post_details.href = 'post_details/post-details.html'
-                    a_post_details.target = '_blank'
-                    div_post_block.append(p_post_main_info, a_post_details)
+                    const b_post_details = document.createElement('button')
+                    b_post_details.classList.add('b_post_details')
+                    b_post_details.innerText = 'show full post ' + post.id
+                    div_post_block.append(p_post_main_info, b_post_details)
 
-                    a_post_details.onclick = function (){
+                    b_post_details.onclick = function (){
                         loc_st_obj.selected_post_id = post.id
                         loc_st_str = JSON.stringify(loc_st_obj)
                         localStorage.setItem('js_control_work_02', loc_st_str)
+                        window.open('post_details/post-details.html')
                     }
                 }
+                if (is_posts_showed === true) {
+                    document.body.scrollIntoView({block: 'end', behavior: 'smooth'})
+                }else{
+                    document.body.scrollIntoView({block: 'start', behavior: 'smooth'})
+                }
+
             })
     }
 }
