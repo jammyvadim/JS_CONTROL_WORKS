@@ -24,7 +24,7 @@ fetch(users_db_link)
             const a_user_details = document.createElement('a')
             a_user_details.classList.add('a_user_details')
             a_user_details.innerText = 'Go to ' + user.name + ' page'
-            a_user_details.href = 'user_details/index.html'
+            a_user_details.href = 'user_details/user-details.html'
             div_user_block.append(p_user_main_info, a_user_details)
 
             a_user_details.onclick = function (){

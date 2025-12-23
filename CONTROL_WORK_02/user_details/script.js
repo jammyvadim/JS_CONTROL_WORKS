@@ -79,7 +79,8 @@ button_user_posts.onclick = function () {
                     const a_post_details = document.createElement('a')
                     a_post_details.classList.add('a_post_details')
                     a_post_details.innerText = 'show full post ' + post.id
-                    a_post_details.href = 'post_details/index.html'
+                    a_post_details.href = 'post_details/post-details.html'
+                    a_post_details.target = '_blank'
                     div_post_block.append(p_post_main_info, a_post_details)
 
                     a_post_details.onclick = function (){

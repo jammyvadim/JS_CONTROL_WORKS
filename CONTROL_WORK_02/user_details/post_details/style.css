@@ -1,0 +1,88 @@
+html{
+    padding: 5px;
+    margin: 5px;
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: flex-start;
+}
+
+header a{
+    font-weight: bold;
+}
+
+main{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+aside{
+    width: 100%;
+    justify-content: center;
+    padding: 0 5px 0 5px;
+}
+
+.h3_selected_post_name{
+    padding: 2px;
+    margin: 5px 0 5px 0;
+    border-radius: 5px;
+    text-align: center;
+    background: lightblue;
+    font-style: italic;
+    font-size: 24px;
+}
+
+.div_fields{
+    display: grid;
+    grid-template-columns: max-content max-content;
+    grid-template-rows: auto;
+    margin: 0;
+    padding: 0;
+    justify-self: center;
+}
+
+.div_fields p{
+    margin: 1px 2px 1px 2px;
+    padding: 0 2px 0 2px;
+    border-style: solid;
+    border-bottom-width: thin;
+    border-color: lightgray;
+    white-space: pre;
+}
+
+.p_field_name{
+    background: gray;
+    color: white;
+}
+
+.p_field_value{
+    font-weight: bold;
+}
+
+.div_comments{
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+}
+
+.div_comment{
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+}
+
+.div_comment a, p{
+    margin: 0;
+    padding: 0;
+}
+
+.div_comment a{
+    font-weight: bold;
+}
+

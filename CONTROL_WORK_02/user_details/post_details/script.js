@@ -6,6 +6,7 @@ const selected_post_db_link = loc_st_obj.database_link + '/posts/' + loc_st_obj.
 
 const div_fields = document.getElementById('div_fields')
 
+
 fetch(selected_post_db_link)
     .then(response=> response.json())
     .then(json=> {
@@ -63,6 +64,16 @@ fetch(selected_post_db_link)
                     p_comment_main_info.classList.add('p_comment_main_info')
                     p_comment_main_info.innerText = comment.id + '. ' + comment.name
                     div_comment_block.appendChild(p_comment_main_info)
+
+                    const p_comment_body = document.createElement('p')
+                    p_comment_body.classList.add('p_comment_body')
+                    p_comment_body.innerText = comment.body
+                    div_comment_block.appendChild(p_comment_body)
+
+                    const a_comment_author = document.createElement('a')
+                    a_comment_author.classList.add('a_comment_author')
+                    a_comment_author.innerHTML = comment.email
+                    div_comment_block.appendChild(a_comment_author)
 
                 }
             })
